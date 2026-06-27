@@ -2,6 +2,154 @@
 //  data.js  –  Demo data pro StockLens
 //  Sem přidávej další tickery ve stejném formátu
 // ============================================================
+// ============================================================
+//  data.js  –  Demo data pro StockLens
+//  Sem přidávej další tickery ve stejném formátu
+// ============================================================
+
+const STOCKS = {
+  AAPL: {
+    name: 'Apple Inc.', sector: 'Technology', country: 'USA',
+    price: 213.55, change: 2.34, changePct: 1.11,
+    marketCap: '$3.28T', pe: 33.2, eps: '$6.43', divYield: '0.52%',
+    revenue: '$385.6B', netIncome: '$93.7B', roe: '147%',
+    high52: '$237.23', low52: '$164.08', avgVol: '56.2M',
+    exchange: 'NASDAQ',
+    tags: ['Large Cap', 'Tech', 'S&P 500', 'Dividenda'],
+    revenueData: [274, 294, 365, 394, 383, 385],
+    priceHistory: {
+      '1M': [205,207,210,208,211,213,212,214,213,215,213,211,213,212,214,213],
+      '3M': [195,198,200,203,205,207,210,208,212,213,211,213],
+      '1R': [170,175,180,178,185,190,195,200,205,208,210,213],
+      '5R': [100,120,150,155,178,200,210,213],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  MSFT: {
+    name: 'Microsoft Corp.', sector: 'Technology', country: 'USA',
+    price: 415.20, change: -1.85, changePct: -0.44,
+    marketCap: '$3.08T', pe: 37.1, eps: '$11.19', divYield: '0.73%',
+    revenue: '$245.1B', netIncome: '$88.1B', roe: '38%',
+    high52: '$468.35', low52: '$309.45', avgVol: '21.4M',
+    exchange: 'NASDAQ',
+    tags: ['Large Cap', 'Tech', 'Cloud', 'Dividenda'],
+    revenueData: [125, 143, 168, 198, 211, 245],
+    priceHistory: {
+      '1M': [410,412,415,413,417,415,418,416,415,417,414,416,415],
+      '3M': [390,395,400,405,408,410,412,415,413,415],
+      '1R': [320,330,340,355,370,385,395,405,410,415],
+      '5R': [160,220,280,248,310,370,400,415],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  NVDA: {
+    name: 'NVIDIA Corp.', sector: 'Semiconductors', country: 'USA',
+    price: 875.40, change: 18.90, changePct: 2.21,
+    marketCap: '$2.15T', pe: 68.4, eps: '$12.79', divYield: '0.04%',
+    revenue: '$60.9B', netIncome: '$29.8B', roe: '91%',
+    high52: '$974.00', low52: '$373.00', avgVol: '42.1M',
+    exchange: 'NASDAQ',
+    tags: ['Large Cap', 'AI', 'Semiconductory', 'Růstová'],
+    revenueData: [11, 17, 27, 27, 44, 60],
+    priceHistory: {
+      '1M': [820,835,850,845,860,870,865,875,870,878,875],
+      '3M': [700,730,760,780,810,830,850,860,875],
+      '1R': [400,450,500,580,650,720,780,830,860,875],
+      '5R': [200,220,280,150,240,480,780,875],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  GOOGL: {
+    name: 'Alphabet Inc.', sector: 'Technology', country: 'USA',
+    price: 178.65, change: 0.95, changePct: 0.53,
+    marketCap: '$2.21T', pe: 23.8, eps: '$7.50', divYield: '—',
+    revenue: '$307.4B', netIncome: '$73.8B', roe: '29%',
+    high52: '$207.05', low52: '$129.00', avgVol: '23.5M',
+    exchange: 'NASDAQ',
+    tags: ['Large Cap', 'Tech', 'Reklama', 'AI'],
+    revenueData: [162, 183, 257, 283, 307, 307],
+    priceHistory: {
+      '1M': [172,174,176,175,177,178,177,179,178,179,178],
+      '3M': [160,165,168,170,173,175,177,178],
+      '1R': [130,138,145,155,162,168,173,178],
+      '5R': [60,74,90,88,108,140,165,178],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  TSLA: {
+    name: 'Tesla Inc.', sector: 'Automotive', country: 'USA',
+    price: 248.23, change: -4.10, changePct: -1.62,
+    marketCap: '$792B', pe: 55.3, eps: '$4.49', divYield: '—',
+    revenue: '$97.7B', netIncome: '$15.0B', roe: '18%',
+    high52: '$299.29', low52: '$138.80', avgVol: '95.3M',
+    exchange: 'NASDAQ',
+    tags: ['Mid Cap', 'EV', 'Energie', 'Růstová'],
+    revenueData: [24, 32, 53, 81, 97, 97],
+    priceHistory: {
+      '1M': [255,252,250,248,245,250,252,248,246,250,248],
+      '3M': [270,265,260,255,252,248,250,248],
+      '1R': [200,210,220,240,260,255,250,248],
+      '5R': [60,220,350,180,170,200,240,248],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  SJ: {
+    name: 'Stella-Jones Inc.', sector: 'Dřevozpracující průmysl', country: 'Kanada',
+    price: 80.02, change: 1.43, changePct: 1.81,
+    marketCap: 'C$4.45B', pe: 12.9, eps: 'C$6.20', divYield: '1.56%',
+    revenue: 'C$3.5B', netIncome: 'C$330M', roe: '18%',
+    high52: 'C$96.50', low52: 'C$63.20', avgVol: '280K',
+    exchange: 'TSX',
+    tags: ['Mid Cap', 'Dřevo', 'Infrastruktura', 'Dividenda', 'Kanada'],
+    revenueData: [2.1, 2.4, 2.8, 3.1, 3.4, 3.5],
+    priceHistory: {
+      '1M': [72,74,75,73,76,77,76,78,79,78,80,80],
+      '3M': [68,70,72,74,73,76,77,78,80],
+      '1R': [70,72,75,80,85,90,88,82,78,75,78,80],
+      '5R': [40,48,55,62,78,88,80],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+  AMZN: {
+    name: 'Amazon.com Inc.', sector: 'E-commerce / Cloud', country: 'USA',
+    price: 192.45, change: 1.20, changePct: 0.63,
+    marketCap: '$2.02T', pe: 42.1, eps: '$4.57', divYield: '—',
+    revenue: '$574.8B', netIncome: '$30.4B', roe: '22%',
+    high52: '$201.20', low52: '$118.35', avgVol: '38.5M',
+    exchange: 'NASDAQ',
+    tags: ['Large Cap', 'Cloud', 'E-commerce', 'AI'],
+    revenueData: [280, 386, 470, 514, 575, 575],
+    priceHistory: {
+      '1M': [188,190,191,192,190,193,192,194,192],
+      '3M': [175,180,183,187,190,192],
+      '1R': [130,145,155,165,175,185,190,192],
+      '5R': [85,130,170,94,170,185,190,192],
+    },
+    years: ['2019','2020','2021','2022','2023','2024'],
+  },
+};
+
+// ============================================================
+//  Autocomplete databáze  –  přidej sem další firmy
+// ============================================================
+const SUGGESTIONS_DB = [
+  { t: 'SJ',    n: 'Stella-Jones Inc.' },
+  { t: 'AAPL',  n: 'Apple Inc.' },
+  { t: 'MSFT',  n: 'Microsoft Corp.' },
+  { t: 'NVDA',  n: 'NVIDIA Corp.' },
+  { t: 'GOOGL', n: 'Alphabet Inc.' },
+  { t: 'TSLA',  n: 'Tesla Inc.' },
+  { t: 'AMZN',  n: 'Amazon.com Inc.' },
+  { t: 'META',  n: 'Meta Platforms' },
+  { t: 'BRK.B', n: 'Berkshire Hathaway' },
+  { t: 'JPM',   n: 'JPMorgan Chase' },
+  { t: 'V',     n: 'Visa Inc.' },
+  { t: 'JNJ',   n: 'Johnson & Johnson' },
+  { t: 'WMT',   n: 'Walmart Inc.' },
+  { t: 'XOM',   n: 'ExxonMobil Corp.' },
+  { t: 'UNH',   n: 'UnitedHealth Group' },
+  { t: 'MA',    n: 'Mastercard Inc.' },
+];
 
 const STOCKS = {
   AAPL: {
