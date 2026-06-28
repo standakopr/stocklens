@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     if (!q || !q.symbol) return res.status(404).json({ error: 'Ticker not found', raw: quote });
     res.json({
       ticker: q.symbol, name: q.name, price: q.price,
-      change: q.change, changePct: q.changesPercentage,
+      change: q.change, changePct: q.changePercentage,
       marketCap: q.marketCap, pe: q.pe, eps: q.eps,
       high52: q.yearHigh, low52: q.yearLow,
       avgVol: q.avgVolume, volume: q.volume, exchange: q.exchange,
