@@ -5,27 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StockLens – Finanční dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <header class="topbar">
     <div class="logo">stock<span>lens</span></div>
-
     <div class="search-wrap">
       <svg class="search-ico" viewBox="0 0 20 20" fill="none">
         <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
         <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <input type="text" id="searchInput" placeholder="Zadej ticker nebo název firmy…" autocomplete="off">
+      <input type="text" id="searchInput" placeholder="Zadej ticker…" autocomplete="off">
       <div class="suggestions" id="suggestions"></div>
     </div>
-
-    <nav class="quick-btns">
-      <button class="qbtn" data-ticker="SJ">SJ</button>
+    <nav class="quick-btns" id="quickBtns">
+      <button class="qbtn" data-ticker="SJ.TO">SJ</button>
       <button class="qbtn" data-ticker="AAPL">AAPL</button>
       <button class="qbtn" data-ticker="MSFT">MSFT</button>
       <button class="qbtn" data-ticker="NVDA">NVDA</button>
@@ -34,17 +30,15 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="content" id="mainContent">
     <div class="empty-state">
       <div class="empty-icon">📈</div>
       <h2>Finanční dashboard</h2>
       <p>Zadej ticker nebo vyber firmu výše</p>
-      <p class="hint">Příklad: AAPL, MSFT, NVDA, TSLA…</p>
+      <p class="hint">Příklad: AAPL, MSFT, NVDA, SJ.TO…</p>
     </div>
   </main>
 
-  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
